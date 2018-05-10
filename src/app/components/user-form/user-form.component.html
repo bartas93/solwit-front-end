@@ -1,0 +1,24 @@
+<form [formGroup]="myForm">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter name" formControlName="name" required>
+        <mat-error *ngIf="myForm.controls.name.invalid">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter surname" formControlName="surname" required>
+        <mat-error *ngIf="myForm.controls.surname.invalid">Surname is required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput maxlength="4" minlength="4" placeholder="Enter birth year" formControlName="birthYear" pattern="[0-9]{4}"
+            required>
+        <mat-error *ngIf="myForm.controls.birthYear.invalid">Birth year is required - 4 numbers</mat-error>
+    </mat-form-field>
+
+    <mat-slide-toggle formControlName="active" labelPosition="before" required>
+        Set user activity
+    </mat-slide-toggle>
+    <div class="row justify-content-around">
+        <button class="col-5" mat-raised-button color="primary" type="submit" (click)="saveUser()" [disabled]="!myForm.valid">Save</button>
+        <button class="col-5" mat-raised-button color="accent" (click)="onNoClick()">Cancel</button>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    margin: 20px 50px 0 50px;
+    overflow: auto;
+  }
+  td i{
+    cursor: pointer;
+    margin: 5px 10px 5px 10px;
+    font-size: 150%;
+    opacity: 0.5;
+  }
+  td i:hover{
+    opacity: 1;
+  }
+  .edit{
+    color:#6002ee;
+  }
+  .trash{
+    color: #ee0290;
+  }
+  .fixed{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    
+}

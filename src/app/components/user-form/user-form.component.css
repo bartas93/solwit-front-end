@@ -1,0 +1,18 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .no-active{
+    color:#6002ee;
+  }
+  .active{
+    color: #ee0290;
+  }
+  mat-slide-toggle{
+      margin: 10px;
+  }

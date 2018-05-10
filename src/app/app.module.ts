@@ -6,26 +6,28 @@ import { AppComponent } from './app.component';
 import { UserRepository } from './repositories/user.repository';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule, MatFormFieldModule, MatPaginatorModule, MatSortModule, MatSnackBarModule, MatDialogModule } from '@angular/material';
+import { TableComponent } from './components/table/table.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, TableComponent, UserFormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatSnackBarModule,
-    MatDialogModule
-
+    MaterialModule
   ],
   providers: [UserRepository, UserService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    UserFormComponent
+  ]
 })
 export class AppModule { }

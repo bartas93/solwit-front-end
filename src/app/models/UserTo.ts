@@ -2,6 +2,6 @@ export class UserTo {
     id: number;
     name: string;
     surname: string;
-    birtYear: number;
+    birthYear: number;
     active: boolean;
 }

@@ -1,7 +1,10 @@
-.example-container {
-    display: flex;
-    flex-direction: column;
-    max-height: 600px;
-    min-width: 300px;
-    overflow: auto;
-  }
+.header{
+    margin:0 50px;
+}
+img{
+    height: 100px;
+    width: auto;
+}
+.vcenter {
+padding:20px; 
+}
